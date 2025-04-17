@@ -1,10 +1,11 @@
-
 package br.com.fiap.postech.agendamento.dto;
 
 import br.com.fiap.postech.agendamento.model.Agendamento;
+import lombok.Data;
 
 import java.time.LocalDateTime;
-@lombok.Data
+
+@Data
 public class AgendamentoDTO {
 
     private Long id;
@@ -13,15 +14,11 @@ public class AgendamentoDTO {
     private LocalDateTime dataHoraAgendamento;
 
     public AgendamentoDTO() {}
-@lombok.Builder
+
     public AgendamentoDTO(Agendamento agendamento) {
         this.id = agendamento.getId();
         this.nomePaciente = agendamento.getNomePaciente();
         this.tipoConsulta = agendamento.getTipoConsulta();
         this.dataHoraAgendamento = agendamento.getDataHoraAgendamento();
     }
-
-
-
-
 }
